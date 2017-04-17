@@ -1,54 +1,42 @@
 ﻿using AcumenSystemTests.PageObjects;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AcumenSystemTests
-{   
+{
     [TestFixture]
     class ContactUsTests : TestFixtureBase
     {
         [Test,
         Description("Given I am on the Acumen home page " +
-                    "When I navigate to the Contact Us page " +
+                    "When I examine the office address at the bottom of the page " +
                     "Then I should see an accurate postcode “TW9 1HY” ")]
         public void AccurateAddress()
         {
             //Arrange
             HomePage homePage = new HomePage(_webDriver);
 
-            //Act
-            ContactUsPage contactUsPage = homePage.Contact();
-
-            //Assert
-            contactUsPage.VerifyPostCodeIs("TW9 1HY");
+            //Act / Assert
+            homePage.VerifyPostCodeIs("TW9 1HY");
 
         }
 
         [Test,
-        Description("Given I am on the Contact Us page " +
+        Description("Given I am on the Acument home page " +
                     "When I choose to get in touch by email " +
                     "Then I should see the correct " + 
                     "email address is pre-populated in my email client ")]
-        public void AccurateEmail()
+        public void AccurateInfoEmail()
         {
             //Arrange
             HomePage homePage = new HomePage(_webDriver);
             
-
-            //Act
-            ContactUsPage contactUsPage = homePage.Contact();
-
-            //Assert
-            contactUsPage.VerifyEmailAddressIs("info@acumenci.com");
+            //Act / Assert
+            homePage.VerifyEmailAddressIs("info@acumenci.com");
 
         }
 
         [Test,
-        Description("Given I am on the Contact Us page " +
+        Description("Given I am on the Acumen home page " +
                     "When I choose to get in touch by phone " +
                     "Then I should see the correct " +
                     "telephone number is pre-populated in my phone app ")]
@@ -56,14 +44,36 @@ namespace AcumenSystemTests
         {
             //Arrange
             HomePage homePage = new HomePage(_webDriver);
+            
+            //Act / Assert
+            homePage.VerifyPhoneNumberIs("020 8334 0420");
 
+        }
 
-            //Act
-            ContactUsPage contactUsPage = homePage.Contact();
+        [Test,
+        Description("Given I am on the Acumen home page " +
+                    "When I choose to view the location of Acumen " +
+                    "Then a map is displayed")]
+        public void VerifyMap()
+        {
+            //Arrange
+            HomePage homePage = new HomePage(_webDriver);
 
-            //Assert
-            contactUsPage.VerifyPhoneNumberIs("020 8334 0420");
+            //Act / Assert
+            homePage.VerifyMapDisplayed();
+        }
 
+        [Test,
+        Description("Given I am on the Acumen home page " +
+                    "When I choose to view their LinkedIn " +
+                    "Then their LinkedIn profile is displayed")]
+        public void VerifyLinkedIn()
+        {
+            //Arrange
+            HomePage homePage = new HomePage(_webDriver);
+
+            //Act / Assert
+            homePage.VerifyLinkedInDisplayed();
         }
     }
 }

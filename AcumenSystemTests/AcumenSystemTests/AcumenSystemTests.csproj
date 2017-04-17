@@ -50,8 +50,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContactUsTests.cs" />
-    <Compile Include="PageObjects\ContactUsPage.cs" />
+    <Compile Include="HomePageTests.cs" />
+    <Compile Include="JoinOurTeamTests.cs" />
+    <Compile Include="PageObjects\BasePage.cs" />
+    <Compile Include="PageObjects\ClientStoriesPage.cs" />
     <Compile Include="PageObjects\HomePage.cs" />
+    <Compile Include="PageObjects\JoinOurTeamPage.cs" />
+    <Compile Include="PageObjects\OurApplicationsPage.cs" />
     <Compile Include="TestFixtureBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
