@@ -18,3 +18,5 @@ AcumenSystemTests/AcumenSystemTests/obj/Debug/AcumenSystemTests.pdb
 AcumenSystemTests/AcumenSystemTests/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 AcumenSystemTests/AcumenSystemTests/obj/Debug/AcumenSystemTests.csproj.FileListAbsolute.txt
 AcumenSystemTests/AcumenSystemTests/obj/Debug/AcumenSystemTests.csprojResolveAssemblyReference.cache
+AcumenSystemTests/AcumenSystemTests/bin/Debug/TestResult.xml
+AcumenSystemTests/AcumenSystemTests/bin/Debug/AcumenSystemTests.dll.VisualState.xml
